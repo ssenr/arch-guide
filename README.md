@@ -38,7 +38,12 @@ We will partition using cgdisk. Before starting the cgdisk utility, keep this ta
 | Root Partition | 8300 | 20GiB or 35GiB |
 | Home Partition | 8300 | N/A |
 
-To begin using cgdisk, use the command `cgdisk /dev/[drive]`. If you do not remember the name of the drive, run `lsblk` and find the name of the drive in the first column. If you're installing
+To begin using cgdisk, use the command `cgdisk /dev/[drive]`. If you do not remember the name of the drive, run `lsblk` and find the name of the drive in the first column. We will beging partitioning in the order of the table given above. 
+
+**EFI System Partition**: Select the large pool of free space and hit enter, then hit enter when asked for first sector, then enter the recommended space for the partition from the table. When asked for the code enter `EF00`.
+
+**Swap Partition**
+
 
 # Notes
 
