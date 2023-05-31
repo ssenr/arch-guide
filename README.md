@@ -42,7 +42,9 @@ To begin using cgdisk, use the command `cgdisk /dev/[drive]`. If you do not reme
 
 **EFI System Partition**: Select the large pool of free space and hit enter, then hit enter when asked for first sector, then enter the recommended space for the partition from the table. When asked for the code enter `EF00`.
 
-**Swap Partition**
+**Swap Partition**: After creating the EFI System Partition there should be three entries in cgdisk, one for the EFI partition, free space with the remaining free space of our drive, as well as another free space partition with about 1017KiB of space allocated. The 1017KiB partition is *likely* protective MBR space which defines the location of the kernel. Select the free space partition with the rest of your hard drives space and create a new partition. Once again, hit enter when asked for the first sector, then enter the recommended space for the partition from the table. Since this is a swap partition, the code will be 8200. 
+
+**Root Partition**: Select the large pool of free space and hit enter, then hit enter when asked for first sector, then enter the recommended space for the partition from the table. When asked for the code enter `8300`. 
 
 
 # Notes
